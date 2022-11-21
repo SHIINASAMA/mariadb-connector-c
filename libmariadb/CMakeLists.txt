@@ -447,6 +447,9 @@ ENDIF()
 
 TARGET_LINK_LIBRARIES(libmariadb LINK_PRIVATE ${SYSTEM_LIBS})
 
+##################### TARGET INTERFACE #####################
+TARGET_INCLUDE_DIRECTORIES(libmariadb PUBLIC ${CC_SOURCE_DIR}/include ${CC_SOURCE_DIR}/libmariadb)
+
 SIGN_TARGET(libmariadb)
 
 IF(CMAKE_SYSTEM_NAME MATCHES "Linux" OR

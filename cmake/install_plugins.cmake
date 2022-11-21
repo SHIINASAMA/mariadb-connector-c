@@ -8,7 +8,12 @@
 # plugin installation
 
 MACRO(INSTALL_PLUGIN name binary_dir)
-  INSTALL(TARGETS ${name} COMPONENT ClientPlugins DESTINATION ${INSTALL_PLUGINDIR})
+  INSTALL(
+          TARGETS ${name}
+          COMPONENT ClientPlugins
+          DESTINATION ${INSTALL_PLUGINDIR}
+          LIBRARY DESTINATION lib
+  )
   IF(MSVC)
     INSTALL(FILES $<TARGET_PDB_FILE:${name}> COMPONENT Debuginfo
       DESTINATION symbols CONFIGURATIONS Debug RelWithDebInfo)
