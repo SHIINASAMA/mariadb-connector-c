@@ -377,11 +377,11 @@ IF(WITH_ICONV)
 ENDIF()
 
 CONFIGURE_FILE(${CC_SOURCE_DIR}/include/ma_config.h.in
-               ${CC_BINARY_DIR}/include/ma_config.h)
+               ${CC_SOURCE_DIR}/include/ma_config.h)
 CONFIGURE_FILE(${CC_SOURCE_DIR}/include/ma_config.h.in
-               ${CC_BINARY_DIR}/include/config.h)
+               ${CC_SOURCE_DIR}/include/config.h)
 CONFIGURE_FILE(${CC_SOURCE_DIR}/include/mariadb_version.h.in
-               ${CC_BINARY_DIR}/include/mariadb_version.h)
+               ${CC_SOURCE_DIR}/include/mariadb_version.h)
 
 INCLUDE_DIRECTORIES(${CC_BINARY_DIR}/include)
 
